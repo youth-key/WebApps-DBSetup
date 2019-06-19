@@ -52,4 +52,13 @@
 		}
 		return $r_str;
 	}
+
+
+
+	function loginCheck(){
+		if($_COOKIE["setup"] == true){
+			header("Location: ../setup/home.php");
+			exit();
+		}
+	}
 ?>

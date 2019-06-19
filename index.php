@@ -1,5 +1,5 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT']."/sys/common.php";
+	require_once "sys/common.php";
 
 	if($_COOKIE["setup"] == true){
 		header("Location: home.php");
