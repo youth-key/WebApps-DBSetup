@@ -18,18 +18,6 @@
 
 
 
-	function login_connect(){
-		if(isset($_COOKIE["setup"])){
-			setcookie("setup", true, time()+3600);
-		}else{
-			setcookie("setup", false, time()+3600);
-			header("Location: index.php");
-			exit();
-		}
-	}
-
-
-
 	function DB_connect(){
 		$ini = parse_ini_file($_SERVER["DOCUMENT_ROOT"]."/config/conf.ini");
 		$dsn = "mysql:dbname=".$ini["db_name"].";host=".$ini["db_server"];
@@ -51,14 +39,5 @@
 			$r_str .= $str[rand(0, count($str) - 1)];
 		}
 		return $r_str;
-	}
-
-
-
-	function loginCheck(){
-		if($_COOKIE["setup"] == true){
-			header("Location: ../setup/home.php");
-			exit();
-		}
 	}
 ?>
