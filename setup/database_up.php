@@ -1,5 +1,5 @@
 <?php
-	require_once "../sys/common.php";
+	require_once "common.php";
 
 	if ($ini['db_name'] != $_POST['db_name']){
 		$ini['db_name'] = $_POST['db_name'];
@@ -23,6 +23,6 @@
 	fclose($fp);
 
 	logfile_writing("DATABASE_UPDATE");
-	header("Location: ../index.php?complete=dbinfo");
+	header("Location: index.php?complete=dbinfo");
 	exit();
 ?>

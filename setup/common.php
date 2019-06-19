@@ -1,12 +1,12 @@
 <?php
-	$ini = parse_ini_file("{$_SERVER['DOCUMENT_ROOT']}/config/conf.ini");
+	$ini = parse_ini_file("../config/conf.ini");
 	$dsn = "mysql:dbname=".$ini["db_name"].";host=".$ini["db_server"];
 
 
 
 	function logfile_writing($w_code){
 		$logfile = date("Y-m-d").".log";
-		$logfile_path = $_SERVER["DOCUMENT_ROOT"]."/log/".$logfile;
+		$logfile_path = "../log/".$logfile;
 		if(!file_exists($logfile_path)){
 			touch($logfile_path);
 		}

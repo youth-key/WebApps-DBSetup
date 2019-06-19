@@ -1,5 +1,5 @@
 <?php
-	require_once "../sys/common.php";
+	require_once "common.php";
 
 	if ($ini['domain'] != $_POST['domain']){
 		$ini['domain'] = $_POST['domain'];
@@ -23,6 +23,6 @@
 	fclose($fp);
 
 	logfile_writing("SYSTEM_UPDATE_COMPLETE");
-	header("Location: ../index.php?complete=sys-info");
+	header("Location: index.php?complete=sys-info");
 	exit();
 ?>

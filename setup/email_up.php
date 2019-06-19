@@ -1,5 +1,5 @@
 <?php
-	require_once "../sys/common.php";
+	require_once "common.php";
 
 	if ($_POST['setup_id']) $ini['setup_id'] = $_POST['setup_id'];
 	if ($_POST['setup_pass']) $ini['setup_pass'] = sha1($_POST['setup_pass']);
@@ -44,6 +44,6 @@
 	}
 
 	logfile_writing("SETUP_UPDATE");
-	header("Location: ../index.php?complete=setup");
+	header("Location: index.php?complete=setup");
 	exit();
 ?>
