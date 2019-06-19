@@ -1,5 +1,5 @@
 <?php
-	require_once "{$_SERVER['DOCUMENT_ROOT']}/sys/common.php";
+	require_once "../sys/common.php";
 
 	if ($_POST['setup_id']) $ini['setup_id'] = $_POST['setup_id'];
 	if ($_POST['setup_pass']) $ini['setup_pass'] = sha1($_POST['setup_pass']);
@@ -16,7 +16,7 @@
 		$ini['contact_email'] = $_POST['contact_email'];
 	}
 
-	$fp = fopen("{$_SERVER['DOCUMENT_ROOT']}/config/conf.ini", 'w');
+	$fp = fopen("../config/conf.ini", 'w');
 	foreach ($ini as $k => $i) fputs($fp, "$k=$i\n");
 	fclose($fp);
 
@@ -44,6 +44,6 @@
 	}
 
 	logfile_writing("SETUP_UPDATE");
-	header("Location: home.php?complete=setup");
+	header("Location: ../index.php?complete=setup");
 	exit();
 ?>
