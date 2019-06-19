@@ -1,5 +1,5 @@
 <?php
-	require_once "sys/common.php";
+	require_once "common.php";
 
 	$pdo = DB_connect();
 	if($pdo != false){
@@ -31,7 +31,7 @@
 	<!-- ############################################################ -->
 
 	<!-- ## セットアップ ################################################ -->
-	<form action="setup/email_up.php" method="post">
+	<form action="email_up.php" method="post">
 		<?php
 		if($_GET["complete"] == "setup"){
 			print("<p>* 情報の更新が完了しました！</p>");
@@ -54,7 +54,7 @@
 	<br><br><br>
 
 	<!-- ## システム系情報 ################################################ -->
-	<form action="setup/server_up.php" method="post">
+	<form action="server_up.php" method="post">
 		<?php
 		if($_GET["complete"] == "sys-info"){
 			print("<p>* 情報の更新が完了しました！</p>");
@@ -86,7 +86,7 @@
 	<br><br><br>
 
 	<!-- ## データベース系情報 ################################################ -->
-	<form action="setup/database_up.php" method="post">
+	<form action="database_up.php" method="post">
 		<p>データベースとの接続状況【<?php
 			$pdo = DB_connect();
 			if($pdo != false) print("良好");
