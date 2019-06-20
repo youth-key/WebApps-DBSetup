@@ -22,7 +22,7 @@
 	<title>Web Server Initialize Kit</title>
 	<meta charset="<?php print($ini['encoding']);?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="css/common.css" type="text/css">
+	<link rel="stylesheet" href="common.css" type="text/css">
 </head>
 
 <body>
