@@ -19,7 +19,7 @@
 
 
 	function DB_connect(){
-		$ini = parse_ini_file($_SERVER["DOCUMENT_ROOT"]."/config/conf.ini");
+		$ini = parse_ini_file("../config/conf.ini");
 		$dsn = "mysql:dbname=".$ini["db_name"].";host=".$ini["db_server"];
 		try{
 			$dbh = new PDO($dsn, $ini["db_user"], $ini["db_password"]);
