@@ -6,4 +6,4 @@ WEBアプリのDB環境等のセットアップコンポーネント
 
 # 使い方
 - setup/index.php にアクセスする。
-- config/conf.ini に設定情報は格納される。
+- 保存したないようは config/conf.ini で確認できる。
